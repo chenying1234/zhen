@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="../contains/style.css"/>
+<link rel="stylesheet" type="text/css" href="../css/details_style.css"/>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/carousel.js"></script>
+<script>
+$(function(){
+	$.cookie.json = true;
+	console.log($.cookie('username'))
+	if($.cookie('username')!=undefined){
+		$('.meau').children('ul').children('span').html("<li><a href='address.html'>"+$.cookie('username')+"</li>");
+	}
+	else{
+		$('.meau').children('ul').children('span').html(" <li><a href='html/register.html'>注册</a></li><li><a href='html/login.html'>登录</a></li>");
+	}
+});
+$(function() {
+	
+	$(".add").click(function() {
+		//获取原有数量
+		var amount = $(this).prev().text();
+		amount++;
+		//加数量，将加了之后的结果放回文本框中显示
+		$(this).prev().text(amount);
+		});
+	$(".minus").click(function() {
+		console.log('-');
+		//获取原有数量
+		var amount = parseInt($(this).next().text());
+		if (amount <= 1) //数量最小减到1
+			return;
+		amount--;
+		//加数量，将加了之后的结果放回文本框中显示
+		$(this).next().text(amount);
+	});
+	$(".btn .add_shop").click(function() {
+		var product = {
+			id: $('.goods-tit').children(".num").children('span').text(),
+			name: $('.goods-tit').children('.infor').text(),
+			src: $('.on').children('img').attr('src'),
+			title: $('.on').children('img').attr('title'),
+			size: $('.option-cont').children('.on').children('p').text(),
+			price: $('.goods-tit').children('.price').children('#price').children('label').text(),
+			amount: $('.goods-attribute').children('.option-num').children('span').text()
+		};
+		console.log(product);
+		//将创建的商品对象保存到数组中，再保存回cookie
+		$.cookie.json = true;
+		//先从cookie中读取数组
+		var products = $.cookie("products");
+		//判断是否读取到数组
+		if (!products) {
+			products = [];
+		}
+		//判断数组中是否存在当前选购商品
+		var index = findIndex(product.id, products);
+		if (index === -1) { //数组中不存在当前选购商品
+			//将当前次添加到购物车的商品保存到数组中
+			products.push(product);
+		} else { //数组中存在当前选购商品
+			products[index].amount=parseInt(products[index].amount)+parseInt(product.amount);
+			console.log(products[index].amount);
+		}
+		//将数组保存回cookie
+		$.cookie("products", products, {
+			expires: 7,
+			path: "/"
+		});
+	});
+	function findIndex(id, products) {
+		for (var i in products) {
+			if (products[i].id === id)
+				return i;
+		}
+		return -1;
+	}
+	});
+</script>
+</head>
+
+<body>
+<!--top-->
+<div class="top">
+    <div class="toper">
+        <a href="#"><img src="../img/top2.jpg"></a>
+    </div>
+</div>
+<!--nav-->
+<div class="nav">
+    <div class="naver">
+        <div class="navleft">
+            <p><a href="#">下载客户端得新人专享1888大礼包</a></p>
+            <ul>
+                <li><a>箱包</a></li>
+                <li><a href="#">配饰</a></li>
+                <li><a>服装</a></li>
+                <li><a>鞋靴</a></li>
+                <li><a>新品</a></li>
+                <li><a>特卖</a></li>
+                <li><a href="../index.html">首页</a></li>
+            </ul>
+        </div>
+        <div class="navright">
+            <div class="meau">
+                <ul>
+                	<li><a class="last" href="cart1.html">购物袋 <span></span></a></li>
+                	<span>
+                	<li><a href="register.html">注册</a></li>
+                    <li><a href="login.html">登录</a></li>
+                    </span>
+                </ul>
+            </div>
+            <div class="search">
+            <form>
+                <input class="txt" type="text" placeholder="豆豆鞋"/>
+                <input class="sub" type="submit" value=""/>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div id="container">
+        <ul class="small_box">
+        	<li><img src="../img/top.jpg" /></li>
+            <li class="small curr"><img src="../img/1.jpg"></li>
+            <li class="small"><img src="../img/3.jpg"></li>
+            <li class="small"><img src="../img/4.jpg"></li>
+            <li class="small"><img src="../img/5.jpg"></li>
+            <li class="small"><img src="../img/2.jpg"></li>
+            <li><img src="../img/bottom.jpg" /></li>
+        </ul>
+        <div class="middle">
+            <img src="../img/1.jpg">
+            <div class="pop"></div>
+        </div>
+        <div class="big">
+   			<img src="../img/1.jpg">
+		</div>
+    </div>
+    <div class="news">
+        <div class="goods-details">
+            <div class="goods-tit">
+                <p class="bran">AFS JEEP</p>
+                <p class="infor">战地吉普(AFS JEEP)T恤 男装2016秋季新款商务休闲纯棉大码V领短袖t恤男 </p>
+                <p class="num">商品编号 <span>7127</span></p>
+                <p class="price">珍品价<span class="zpj" id="price"><i>￥</i><label>888</label></span><span class="market" id="marketprice">市场价：￥1366</span></p>
+            </div>
+            <div class="border">
+                <div class="goods-attribute">
+                    <div class="tit1" >颜&nbsp;&nbsp;色</div>
+                    <div class="option-cont" class="color">
+                    <span><a href="#" class="on"><img title="蓝色|短袖款" src="../img/5.jpg"/></a></span>
+                    </div>
+                </div>
+                <div class="goods-attribute">
+                    <div class="tit2">尺&nbsp;&nbsp;码</div> 
+                   <div class="option-cont">
+	                    <a href="#" class="on"><p>XL</p></a>
+                    </div>
+                </div>
+                <div class="goods-attribute">
+                    <div class="tit2">数&nbsp;&nbsp;量</div> 
+                    <div class="option-num">
+                    <a class="minus" href="javascript:;">-</a>
+                    	<span>1</span>
+                    <a class="add" href="javascript:;">+</a>
+                    </div>
+                    <div class="note">
+                    此商品需要调货，预计下单后3-6天收到货品
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+            	<a class="buy" href="cart1.html">立即购买</a>
+                <a class="add_shop">放入购物袋</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--servicer-->
+<div class="servicer">
+    <div class="service">
+        <div class="serleft">
+            <div class="parttop">
+                <dl>
+                    <dt><img src="../img/index_dt1.jpg" /></dt>
+                    <dd> 
+                        <p>100%正品保证</p>
+                        <span>Genuine Guarantee</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index_dt2.jpg" /></dt>
+                    <dd> 
+                        <p>比香港更便宜</p>
+                        <span>Attractive Pricing</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index_dt3.jpg" /></dt>
+                    <dd> 
+                        <p>现货现发</p>
+                        <span>Lightning Delivery</span>
+                    </dd>
+                </dl>
+            </div>
+            <div class="partbottom">
+                <ul>
+                    <li class="first">新手指导</li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">联系客服</a></li>
+                    <li><a href="#">正品保障</a></li>
+                    <li><a href="#">全球同步</a></li>
+                </ul>
+                <ul>
+                    <li class="first">会员服务</li>
+                    <li><a href="#">会员说明</a></li>
+                    <li><a href="#">余额说明</a></li>
+                    <li><a href="#">积分说明</a></li>
+                    <li><a href="#">优惠说明</a></li>
+                </ul>
+                <ul>
+                    <li class="first">支付方式</li>
+                    <li><a href="#">在线支付</a></li>
+                    <li><a href="#">货到付款</a></li>
+                    <li><a href="#">分期付款</a></li>
+                </ul>
+                <ul>
+                    <li class="first">配送说明</li>
+                    <li><a href="#">配送范围</a></li>
+                    <li><a href="#">配送时间</a></li>
+                </ul>
+                <ul>
+                    <li class="first">售后服务</li>
+                    <li><a href="#">保养护理说明</a></li>
+                    <li><a href="#">退款说明</a></li>
+                    <li><a href="#">退换货流程</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="serright">
+            <div class="partleft">
+                <h3>关注我们</h3>
+                <dl>
+                    <dt><img src="../img/phone.jpg" /></dt>
+                    <dd><a href="#">下载APP 首单减￥50</a></dd>
+                </dl>
+                <p></p>
+                <dl>
+                    <dt><img src="../img/code.jpg" /></dt>
+                    <dd>微信扫描有好礼</dd>
+                </dl>
+            </div>
+            <div class="partright">
+                <h3>关注我们</h3>
+                <dl>
+                    <dt><img src="../img/online.jpg" /></dt>
+                    <dd><a href="#">在线客服</a></dd>
+                </dl>
+                <p></p>
+                <span class="first">400-009-6666</span>
+                <span>周一 ~ 周日</span>
+                <span>9:00-22:00</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--foot-->
+<div class="foot">
+    <p><a href="#">企业客户</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">人才招聘</a>|<a href="#">友情链接</a></p>
+    <p><a href="#">京ICP证110290号</a>|<a href="#">京ICP备11014626号-5</a>|<a href="#">京公网安备11010502025723号</a>|<a href="#">食品流通许可证SP1101121310106363(1-1)</a>|<a href="#">出版物经营许可证 新出发京批字第直130121号</a></p>
+</div>
+</body>
+</html>

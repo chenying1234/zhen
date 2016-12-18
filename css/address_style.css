@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0;padding: 0;}
+a{text-decoration:none;	cursor:pointer;}
+img{border:0;display:block;}
+ul,li{list-style:none;}
+body{font-size:12px;font-family:"微软雅黑";}
+form{overflow:hidden;}
+div{overflow:hidden;}
+.clear{clear:both; margin:0; overflow:hidden;height:0;}
+.Personal_map{ width:980px; height:30px; line-height:30px; margin:0px auto;}
+.Personal_map span{ float:left; font-size:12px; color:#666;}
+.Personal_map span a{ float:none; color:#666;}
+.Personal_map a{ float:right; font-size:12px; color:#000; text-decoration:none;}
+
+.main{ width:980px; margin:0 auto;  background:#f5f5f5; font-family: arial,微软雅黑,宋体;}
+.main_box{width:978px;border-left:#d9d9d9 1px solid; border-right:#d9d9d9 1px solid; }
+.main_left{ float:left; width:158px;}
+.main_left dt{ width:138px;height:44px;line-height:44px; font-size:14px;font-weight:bold;color:#313131;padding-left:20px; background:url(../img/dt_bg.jpg) 0 0 repeat-x; margin-top:5px;}
+.main_left dd a{width:108px;height:30px;line-height:30px;font-size:14px;color:#5f5f5f; display:block;padding-left:50px;}
+.main_left dd a:hover{width:108px;height:30px;line-height:30px;font-size:14px; color:#000000;background:#e6e6e6;}
+
+.main_right{width:819px;float: left; font-size:12px;border-left:#d9d9d9 1px solid;color:#5f5f5f;min-height:680px; _height:680px; background: #ffffff;}
+/*我的订单详情页面*/
+.main_right_shang1{width:760px; margin:0 auto 70px; position:relative;overflow:hidden;}
+.main_right_shang1_title{width:734px;height:35px;line-height:35px;color:#313131; font-weight:bold;font-size:14px; margin-top:20px; border-bottom:1px solid #e3e3e3;  padding-left:26px; position:relative;}
+.my_order_bg{background:url(../img/my_order_bg.jpg) no-repeat 0 9px;}
+.item_main{ padding-top:35px;overflow:hidden;}
+.item_main .item{ font-size:14px; margin-bottom:18px;}
+.item_main .margin30{ margin-bottom:28px;}
+.item_main .item .label{float:left; width:110px; text-align:right; }
+.item_main .item .label1{ height:25px; line-height:25px;}
+.item_main .item .label .red{ color:#fe0000; font-size:12px;}
+.item_main .item .fl{ float:left; width:600px; padding-left:12px; color:#303030;}
+.item_main .item .fl .f12{  margin-left:20px;}
+.item_main .item .fl .f12 a{font-size:12px; color:#606060;}
+.item_main .item .fl .btn{ height: 24px; line-height: 24px;}
+.item_main .item .fl .btn .xiugai{ width: 60px; height: 24px; background:url(../img//dl_alter.jpg) 0 0 no-repeat; display: block; float: left; border:none;cursor: pointer; margin:0;}
+.item_main .item .fl .btn .quxiao{ width:40px; height:24px; font-size: 12px; color: #5f5f5f; float: left; margin: 0px; background:none;border:none;cursor: pointer; margin: 0 0 0 15px; display:inline;}
+.item_main .item .fl .phone_edit input{display: block; width: 198px; height: 26px; border: 1px solid; border-color: #aaaaaa #cccccc #cccccc #aaaaaa; margin: 10px 0; color: #303030;}
+.item_main .item .fl .flk12{font-size:12px; color:#b2b2b2; margin-top:13px;}
+.item_main .item .fl .flk{ font-size:12px; color:#b2b2b2; margin-top:-5px;}
+.item_main .item .fl .flk1{ font-size:12px; color:#b2b2b2; margin-top:20px;}
+.item_main .item .fl .flk1 input{border:1px solid; border-color:#aaaaaa #cccccc #cccccc #aaaaaa; padding:4px; width:347px; font-size:14px; color:#313131;}
+.item_main .item .fl label{ margin:0 18px 0 4px;}
+.item_main .item .fl .select_box{ float:left; height:26px; line-height:26px;}
+.item_main .item .fl #city_4 select{background-color: #fff;background-position: right center;background-repeat: no-repeat;border: 1px solid #888;
+font: 12px/1.5 Tahoma,Arial,sans-serif;padding:4px;}
+select.sele{ border:1px solid; border-color:#aaaaaa #cccccc #cccccc #aaaaaa; padding:4px; font-size:12px; margin-right:10px; float:left; color:#000;}
+select.sele3{ width:88px;}
+select.sele4{ width:120px;}
+select.sele5{ width:108px;}
+.item_main .item .fl .hobby{ overflow:hidden; width:366px;}
+.item_main .item .fl .hobby li{ width:122px; height:28px; float:left;}
+.item_main .item .fl .hobby input{ margin-right:6px;}
+.item_main .item .fl .hobby label{ color:#5f5f5f;}
+.item_main .item .fl .save{ margin-top:27px;}
+.item_main .item .fl .save input{ width:80px; height:28px; background:url(../img/save.jpg) 0 0 no-repeat; display:block; border:none;cursor: pointer;}

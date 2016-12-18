@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0;padding: 0;}
+a{cursor:pointer;text-decoration:none;outline:none;color:#6c6c6c;}
+
+img{border:0;}
+ul,li{list-style:none;}
+body{font-size:12px;font-family:"微软雅黑";}
+.mem_content{width:100%;height:632px;background:#f3f3f3;overflow:hidden;}
+.mem_content .mem_box{width:970px; margin:0 auto; border:1px solid #d9d9d9; box-shadow:#d9d9d9 0px 0px 4px 1px; min-height:480px; _height:480px; padding:0px 10px; background:#FFF url(../img/reg_bg.jpg) no-repeat 700px 82px; padding-bottom:50px;margin-top:50px;}
+.mem_content .mem_box .mem_box_tt{height:56px; line-height:56px; border-bottom:1px solid #ededed; padding:0 38px 0 20px;}
+.mem_content .mem_box .mem_box_tt p{float:left;font-size:16px;}
+.mem_content .mem_box .mem_box_tt p a{color:#ff4400;}
+.mem_content .mem_box .mem_box_tt span a{color:#ff4400; font-size:12px;} 
+.mem_content .mem_box .mem_box_tt span{float:right; font-size:12px;}
+.mem_content .mem_box .mem_form{padding-top:10px; float:left; width:680px; overflow:hidden;}
+.mem_content .mem_box .mem_form p,.mem_content .mem_box .mem_form .phone-mail{clear:both;}
+.mem_content .mem_box .mem_name{width:115px; line-height:40px; float:left; text-align:right; margin-top:20px; font-size:14px;}
+.mem_content .mem_box .mem_text{width:248px;height:32px; overflow:hidden; line-height:32px; border:1px solid #e0e0e0; margin-top:20px;font-size:14px; border-radius:3px; padding:3px; float:left;margin-right:5px;}
+.mem_content .mem_box .mem_form .mem_text2{width:98px;height:32px; line-height:32px;border:1px solid #e0e0e0; margin-top:20px; font-size:14px; border-radius:3px; padding:3px; float:left;margin-right:5px;}
+.mem_content .mem_box .mem_form .mem_captcha{margin-top:10px; width:100%; float:left}
+.mem_content .mem_box .mem_form .captcha_box{margin-top:20px; float:left; width:170px;}
+.mem_content .mem_box .mem_form .captcha_box a{display:block;color: #6c6c6c;}
+.mem_content .mem_box .mem_form .captcha_box a:hover{color: #ff5b22;}
+.mem_content .mem_box .mem_form .pact{padding-left:120px;margin-top:20px; height:15px; line-height:15px; float:left; width:100%; position:relative}
+.mem_content .mem_box .mem_form .pact input{margin-right:5px;}
+.mem_content .mem_box .mem_form .pact a{color:#3c3c3c; text-decoration:underline}
+.mem_content .mem_box .mem_form .mem_sub{margin-left:120px; _margin-left:30px; margin-top:25px; width:270px; float:left}
+.mem_content .mem_box .mem_form .mem_sub a{width:270px;height: 34px;background: #ce0000;line-height: 32px;font-size: 16px;color: #FFF;letter-spacing: 15px;margin-top: 15px;display: inline-block;text-align: center;box-shadow: 0px 1px 2px #dbdbdb;}
+.mem_content .mem_box .mem_form .mem_sub a:hover{background-color: #f22800;}
+.mem_content .mem_box .mem_form .mem_text_er{background:#FFEBEC; border: 1px solid #FFBDBF;color: #FF0000;}

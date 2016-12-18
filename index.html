@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="contains/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index_style.css"/>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/index_car.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script>
+    	$(function(){
+    		$.cookie.json = true;
+    		console.log($.cookie('username'));
+			console.log($.cookie('password'));
+			if($.cookie('username')!=undefined){
+				$('.meau').children('ul').children('span').html("<li><a  class='back' href='#'>退出</a></li><li><a href='html/address.html'>"+$.cookie('username')+"</li>");
+			}
+			else{
+				$('.meau').children('ul').children('span').html(" <li><a href='html/register.html'>注册</a></li><li><a href='html/login.html'>登录</a></li>");
+			}
+			$('.back').click(function(){
+				window.location.href = "html/login.html";
+			});
+    	});
+    </script>
+</head>
+<body>
+<!--top-->
+<div class="top">
+    <div class="toper">
+        <a href="#"><img src="img/top2.jpg"></a>
+    </div>
+</div>
+<!--nav-->
+<div class="nav">
+    <div class="naver">
+        <div class="navleft">
+            <p><a href="#">下载客户端得新人专享1888大礼包</a></p>
+            <ul class=".Zpg_headNav">
+				<li>
+				<a class="active">箱包</a>
+				<div class="Zpg_headNavC">
+					<ul class="firstul">
+						<li class="firstli">
+						   <a target="_blank" href="javascript:;" title="女士箱包">
+						       女士箱包</a>
+					    </li>
+						<li><a target="_blank" href="javascript:;">手提包</a></li>
+						<li><a target="_blank" href="javascript:;">钱包</a></li>
+						<li><a target="_blank" href="javascript:;">单肩包</a></li>
+						<li><a target="_blank" href="javascript:;">卡/零钱/钥匙包</a></li>
+						<li><a target="_blank" href="javascript:;">手拿包</a></li>
+						<li><a target="_blank" href="javascript:;">旅行箱</a></li>
+						<li><a target="_blank" href="javascript:;">双肩背包</a></li>
+						<li><a target="_blank" href="javascript:;">化妆包</a></li>
+						<li><a target="_blank" href="javascript:;">数码包</a></li>
+						<li><a target="_blank" href="javascript:;">腰包</a></li>
+                	</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="男士箱包">
+						       男士箱包</a>
+						</li>
+						<li><a target="_blank" href="javascript:;">钱包</a></li>
+						<li><a target="_blank" href="javascript:;">单肩包</a></li>
+						<li><a target="_blank" href="javascript:;">手提包</a></li>
+						<li><a target="_blank" href="javascript:;">手拿包</a></li>
+						<li><a target="_blank" href="javascript:;">卡/零钱/钥匙包</a></li>
+						<li><a target="_blank" href="javascript:;">旅行箱</a></li>
+						<li><a target="_blank" href="javascript:;">双肩背包</a></li>
+						<li><a target="_blank" href="javascript:;">数码包</a></li>
+						<li><a target="_blank" href="javascript:;">腰包</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="热门品牌">
+						       热门品牌</a>
+						</li>
+						<li><a target="_blank" href="javascript:;">Burberry</a></li>
+						<li><a target="_blank" href="javascript:;">Coach</a></li>
+						<li><a target="_blank" href="javascript:;">Salvatore Ferragamo</a></li>
+						<li><a target="_blank" href="javascript:;">Prada</a></li>
+						<li><a target="_blank" href="javascript:;">Gucci</a></li>
+						<li><a target="_blank" href="javascript:;">Michael Kors</a></li>
+						<li><a target="_blank" href="javascript:;">Bottega Veneta</a></li>
+						<li><a target="_blank" href="javascript:;">Bally</a></li>
+						<li><a target="_blank" href="javascript:;">Delsey</a></li>
+						<li><a target="_blank" href="javascript:;">Moschino</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="热门词">
+						       热门词</a>
+						</li>
+						<li><a target="_blank" href="javascript:;">韩星同款包袋</a></li>
+						<li><a target="_blank" href="javascript:;">普拉达牛皮包袋</a></li>
+						<li><a target="_blank" href="javascript:;">巴宝莉格纹包袋</a></li>
+						<li><a target="_blank" href="javascript:;">大眼睛包包</a></li>
+						<li><a target="_blank" href="javascript:;">潮流双肩包</a></li>
+					</ul>
+					<p>
+					    <a target="_blank" href="javascript:;">
+					        <img alt="" src="img/151023151226308881femtf.png">
+				        </a>
+				    </p>
+				</div>
+                </li>
+                <li><a href="html/next.html" class="active">配饰</a>
+                	<div class="Zpg_headNavC">
+					<ul class="firstul">
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="女士配饰">
+								       女士配饰			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;">围巾</a></li>
+						<li><a target="_blank" href="javascript:;">项饰</a></li>
+						<li><a target="_blank" href="javascript:;">腕饰</a></li>
+						<li><a target="_blank" href="javascript:;">太阳镜</a></li>
+						<li><a target="_blank" href="javascript:;">丝巾</a></li>
+						<li><a target="_blank" href="javascript:;">耳饰</a></li>
+						<li><a target="_blank" href="javascript:;">腰带</a></li>
+						<li><a target="_blank" href="javascript:;">镜架</a></li>
+						<li><a target="_blank" href="javascript:;">文具</a></li>
+						<li><a target="_blank" href="javascript:;">钥匙扣</a></li>
+						<li><a target="_blank" href="javascript:;">戒指</a></li>
+						<li><a target="_blank" href="javascript:;">袜子</a></li>
+						<li><a target="_blank" href="javascript:;">帽子</a></li>
+						<li><a target="_blank" href="javascript:;">胸饰</a></li>
+						<li><a target="_blank" href="javascript:;">手套</a></li>
+						<li><a target="_blank" href="javascript:;">饰品套装</a></li>
+						<li><a target="_blank" href="javascript:;">手帕</a></li>
+						<li><a target="_blank" href="javascript:;">挂饰摆件</a></li>
+						<li><a target="_blank" href="javascript:;">手机套</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="男士配饰">
+								       男士配饰			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;">腰带</a></li>
+						<li><a target="_blank" href="javascript:;">围巾</a></li>
+						<li><a target="_blank" href="javascript:;" class="">领带</a></li>
+						<li><a target="_blank" href="javascript:;" class="">文具</a></li>
+						<li><a target="_blank" href="javascript:;" class="">镜架</a></li>
+						<li><a target="_blank" href="javascript:;" class="">钥匙扣</a></li>
+						<li><a target="_blank" href="javascript:;" class="">太阳镜</a></li>
+						<li><a target="_blank" href="javascript:;" class="">帽子</a></li>
+						<li><a target="_blank" href="javascript:;" class="">腕饰</a></li>
+						<li><a target="_blank" href="javascript:;" class="">手套</a></li>
+						<li><a target="_blank" href="javascript:;">挂饰摆件</a></li>
+						<li><a target="_blank" href="javascript:;">袜子</a></li>
+						<li><a target="_blank" href="javascript:;">手机套</a></li>
+						<li><a target="_blank" href="javascript:;">袖扣</a></li>
+						<li><a target="_blank" href="javascript:;">手杖</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="热门品牌">
+								       热门品牌			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;">Burberry</a></li>
+						<li><a target="_blank" href="javascript:;">Salvatore Ferragamo</a></li>
+						<li><a target="_blank" href="javascript:;">Gucci</a></li>
+						<li><a target="_blank" href="javascript:;">Prada</a></li>
+						<li><a target="_blank" href="javascript:;">Swarovski</a></li>
+						<li><a target="_blank" href="javascript:;">Alexander McQueen</a></li>
+						<li><a target="_blank" href="javascript:;">Versace</a></li>
+						<li><a target="_blank" href="javascript:;">Montblanc</a></li>
+						<li><a target="_blank" href="javascript:;">RAY-BAN</a></li>
+						<li><a target="_blank" href="javascript:;">Bottega Veneta</a></li>
+						<li><a target="_blank" href="javascript:;">Z Zegna</a></li>
+						<li><a target="_blank" href="javascript:;">Dior</a></li>
+						<li><a target="_blank" href="javascript:;">Hermès</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="热门词">
+								       热门词			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;">男士名品腰带</a></li>
+						<li><a target="_blank" href="javascript:;">羊绒围巾</a></li>
+						<li><a target="_blank" href="javascript:;">宝格丽</a></li>
+						<li><a target="_blank" href="javascript:;">卡地亚</a></li>
+						<li><a target="_blank" href="javascript:;">梵克雅宝</a></li>
+						<li><a target="_blank" href="javascript:;">爱马仕</a></li>
+					</ul>
+					<p>
+						<a target="_blank" href="javascript:;">
+							<img alt="" src="img/151218111139644788sd9rr.png">
+						</a>
+					</p>
+				</div>
+                </li>
+                <li><a class="active">服装</a>
+               	<div class="Zpg_headNavC">
+					<ul class="firstul">
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="奢品男装">
+								      奢品男装			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;">棉服/羽绒服</a></li>
+						<li><a target="_blank" href="javascript:;">夹克</a></li>
+						<li><a target="_blank" href="javascript:;">大衣</a></li>
+						<li><a target="_blank" href="javascript:;">风衣</a></li>
+						<li><a target="_blank" href="javascript:;">针织衫/毛衫</a></li>
+						<li><a target="_blank" href="javascript:;">衬衫</a></li>
+						<li><a target="_blank" href="javascript:;">卫衣</a></li>
+						<li><a target="_blank" href="javascript:;">西装上衣</a></li>
+						<li><a target="_blank" href="javascript:;">T恤</a></li>
+						<li><a target="_blank" href="javascript:;">皮衣/皮草</a></li>
+						<li><a target="_blank" href="javascript:;">牛仔裤</a></li>
+						<li><a target="_blank" href="javascript:;">西装套装</a></li>
+						<li><a target="_blank" href="javascript:;">POLO衫</a></li>
+						<li><a target="_blank" href="javascript:;">休闲裤</a></li>
+						<li><a target="_blank" href="javascript:;">运动套装</a></li>
+						<li><a target="_blank" href="javascript:;">西裤</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="奢品女装" class="">
+								       奢品女装			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;" class="">外套</a></li>
+						<li><a target="_blank" href="javascript:;" class="">羽绒服</a></li>
+						<li><a target="_blank" href="javascript:;" class="">针织衫/毛衫</a></li>
+						<li><a target="_blank" href="javascript:;" class="">卫衣</a></li>
+						<li><a target="_blank" href="javascript:;" class="">裙装</a></li>
+						<li><a target="_blank" href="javascript:;" class="">裤装</a></li>
+						<li><a target="_blank" href="javascript:;" class="">T恤</a></li>
+						<li><a target="_blank" href="javascript:;" class="">衬衫</a></li>
+						<li><a target="_blank" href="javascript:;" class="">POLO衫</a></li>
+						<li><a target="_blank" href="javascript:;" class="">背心</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="热门品牌" class="">
+								       热门品牌			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;" class="">Burberry</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Armani Jeans</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Prada</a></li>
+						<li><a target="_blank" href="javascript:;" class="">EA7</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Maurizio Baldassari</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Modesto Bertotto</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Emporio Armani</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Z Zegna</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Ermenegildo Zegna</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Moncler</a></li>
+						<li><a target="_blank" href="javascript:;">Versace Collection</a></li>
+						<li><a target="_blank" href="javascript:;">Givenchy</a></li>
+						<li><a target="_blank" href="javascript:;">Diesel</a></li>
+						<li><a target="_blank" href="javascript:;">hugoboss</a></li>
+						<li><a target="_blank" href="javascript:;">Dolce &amp; Gabbana</a></li>
+						<li><a target="_blank" href="javascript:;">MCQ</a></li>
+						<li><a target="_blank" href="javascript:;">kenzo</a></li>
+						<li><a target="_blank" href="javascript:;">ROEN</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="热门词" class="">
+								       热门词			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;" class="">巴宝莉 大格纹衬衫</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Moncler 羽绒王者</a></li>
+						<li><a target="_blank" href="javascript:;" class="">秋冬新品夹克</a></li>
+						<li><a target="_blank" href="javascript:;" class="">普拉达 精致剪裁男裤</a></li>
+						<li><a target="_blank" href="javascript:;">奢华女裙 女神必备</a></li>
+					</ul>
+					<p>
+						<a target="_blank" href="javascript:;">
+							<img alt="" src="img/160222112932015369jbo1b.jpg">
+						</a>
+					</p>
+				</div>
+                </li>
+                <li><a class="active">鞋靴</a>
+                	<div class="Zpg_headNavC">
+		    		<ul class="firstul">
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="女士鞋靴">
+									       女士鞋靴			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;">休闲鞋</a></li>
+						<li><a target="_blank" href="javascript:;">雪地靴</a></li>
+						<li><a target="_blank" href="javascript:;">乐福鞋</a></li>
+						<li><a target="_blank" href="javascript:;">及踝靴</a></li>
+						<li><a target="_blank" href="javascript:;">单鞋</a></li>
+						<li><a target="_blank" href="javascript:;">高筒靴</a></li>
+						<li><a target="_blank" href="javascript:;">高跟鞋</a></li>
+						<li><a target="_blank" href="javascript:;">休闲运动鞋</a></li>
+						<li><a target="_blank" href="javascript:;">坡跟鞋</a></li>
+						<li><a target="_blank" href="javascript:;">拖鞋</a></li>
+						<li><a target="_blank" href="javascript:;">凉鞋</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="男士鞋靴" class="">
+									       男士鞋靴			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;" class="">休闲运动鞋</a></li>
+						<li><a target="_blank" href="javascript:;" class="">乐福鞋</a></li>
+						<li><a target="_blank" href="javascript:;" class="">板鞋</a></li>
+						<li><a target="_blank" href="javascript:;" class="">休闲鞋</a></li>
+						<li><a target="_blank" href="javascript:;" class="">高筒靴</a></li>
+						<li><a target="_blank" href="javascript:;" class="">商务正装鞋</a></li>
+						<li><a target="_blank" href="javascript:;" class="">拖鞋</a></li>
+						<li><a target="_blank" href="javascript:;" class="">雪地靴</a></li>
+						<li><a target="_blank" href="javascript:;" class="">及踝靴</a></li>
+						<li><a target="_blank" href="javascript:;" class="">凉鞋</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="热门品牌">
+									       热门品牌			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;">Prada</a></li>
+						<li><a target="_blank" href="javascript:;">TOD'S</a></li>
+						<li><a target="_blank" href="javascript:;">Salvatore Ferragamo</a></li>
+						<li><a target="_blank" href="javascript:;">Bally</a></li>
+						<li><a target="_blank" href="javascript:;" class="">Gucci</a></li>
+						<li><a target="_blank" href="javascript:;" class="">GML</a></li>
+						<li><a target="_blank" href="javascript:;">Jumbougg</a></li>
+						<li><a target="_blank" href="javascript:;">Giuseppe Zanotti</a></li>
+						<li><a target="_blank" href="javascript:;">Kenzo</a></li>
+						<li><a target="_blank" href="javascript:;">S.T.Dupont</a></li>
+					</ul>
+					<ul>
+						<li class="firstli">
+							<a target="_blank" href="javascript:;" title="热门词">
+									       热门词			       </a>
+						</li>
+						<li><a target="_blank" href="javascript:;">新品女鞋</a></li>
+						<li><a target="_blank" href="javascript:;">休闲鞋</a></li>
+						<li><a target="_blank" href="javascript:;">豆豆鞋</a></li>
+					</ul>
+					<p>
+						<a target="_blank" href="javascript:;">
+							<img alt="" src="img/151221090406169594gexg6.png">
+						</a>
+					</p>
+					</div>
+                </li>
+                <li><a>新品</a></li>
+                <li><a>特卖</a></li>
+                <li><a href="index.html">首页</a></li>
+            </ul>
+        </div>
+        <div class="navright">
+            <div class="meau">
+                <ul>
+                	<li><a class="last" href="html/cart1.html">购物袋 <span></span></a></li>
+                	<span>               	
+                    <li><a href="html/register.html">注册</a></li>
+                    <li><a href="html/login.html">登录</a></li>
+                    </span>
+                    
+                </ul>
+            </div>
+            <div class="search">
+            <form>
+                <input class="txt" type="text" placeholder="豆豆鞋"/>
+                <input class="sub" type="submit" value=""/>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--banner-->
+<div id="banner">
+    <ul id="box">
+        <li><img src="img/banner.jpg" /></li>
+        <li><img src="img/5426cfc0N5c011fc9.jpg" /></li>
+        <li><img src="img/5426cfc9N595e44ee.jpg" /></li>
+    </ul>
+    <div id="pages"></div>
+    <div id="prev"></div>
+    <div id="next"></div>
+</div>
+<!--main-->
+<div class="main">
+    <div class="maintop">
+        <ul>
+            <li><a href="#"><img src="img/首页_01.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_02.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_03.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_04.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_05.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_06.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_07.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_08.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_09.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_10.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_11.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_12.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_13.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_14.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_15.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_16.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_17.jpg" /></a></li>
+            <li><a href="#"><img src="img/首页_18.jpg" /></a></li>
+        </ul>
+    </div>
+    <div class="mainbottom">
+        <ul>
+            <li><a href="#"><img src="img/index_li1.jpg" /></a></li>
+            <li><a href="#"><img src="img/index_li5.jpg" /></a></li>
+        </ul>
+        <ul class="last">
+            <li><a href="#"><img src="img/index_li2.jpg" /></a></li>
+            <li><a href="#"><img src="img/index_li3.jpg" /></a></li>
+            <li><a href="#"><img src="img/index_li4.jpg" /></a></li>
+        </ul>
+        <p>声明:珍品网不会以电话、短信等任何形式要求顾客退款、转账或提供密码隐私信息，如遇此类问题，请及时致电官方唯一客服电话:400-009-6666，或联系珍品时尚顾问咨询核实，请务必提高警惕，避免上当受骗！</p>
+    </div>
+</div>
+<!--servicer-->
+<div class="servicer">
+    <div class="service">
+        <div class="serleft">
+            <div class="parttop">
+                <dl>
+                    <dt><img src="img/index_dt1.jpg" /></dt>
+                    <dd> 
+                        <p>100%正品保证</p>
+                        <span>Genuine Guarantee</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/index_dt2.jpg" /></dt>
+                    <dd> 
+                        <p>比香港更便宜</p>
+                        <span>Attractive Pricing</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="img/index_dt3.jpg" /></dt>
+                    <dd> 
+                        <p>现货现发</p>
+                        <span>Lightning Delivery</span>
+                    </dd>
+                </dl>
+            </div>
+            <div class="partbottom">
+                <ul>
+                    <li class="first">新手指导</li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">联系客服</a></li>
+                    <li><a href="#">正品保障</a></li>
+                    <li><a href="#">全球同步</a></li>
+                </ul>
+                <ul>
+                    <li class="first">会员服务</li>
+                    <li><a href="#">会员说明</a></li>
+                    <li><a href="#">余额说明</a></li>
+                    <li><a href="#">积分说明</a></li>
+                    <li><a href="#">优惠说明</a></li>
+                </ul>
+                <ul>
+                    <li class="first">支付方式</li>
+                    <li><a href="#">在线支付</a></li>
+                    <li><a href="#">货到付款</a></li>
+                    <li><a href="#">分期付款</a></li>
+                </ul>
+                <ul>
+                    <li class="first">配送说明</li>
+                    <li><a href="#">配送范围</a></li>
+                    <li><a href="#">配送时间</a></li>
+                </ul>
+                <ul>
+                    <li class="first">售后服务</li>
+                    <li><a href="#">保养护理说明</a></li>
+                    <li><a href="#">退款说明</a></li>
+                    <li><a href="#">退换货流程</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="serright">
+            <div class="partleft">
+                <h3>关注我们</h3>
+                <dl>
+                    <dt><img src="img/phone.jpg" /></dt>
+                    <dd><a href="#">下载APP 首单减￥50</a></dd>
+                </dl>
+                <p></p>
+                <dl>
+                    <dt><img src="img/code.jpg" /></dt>
+                    <dd>微信扫描有好礼</dd>
+                </dl>
+            </div>
+            <div class="partright">
+                <h3>关注我们</h3>
+                <dl>
+                    <dt><img src="img/online.jpg" /></dt>
+                    <dd><a href="#">在线客服</a></dd>
+                </dl>
+                <p></p>
+                <span class="first">400-009-6666</span>
+                <span>周一 ~ 周日</span>
+                <span>9:00-22:00</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--foot-->
+<div class="foot">
+<p><a href="#">企业客户</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">人才招聘</a>|<a href="#">友情链接</a></p>
+<p><a href="#">京ICP证110290号</a>|<a href="#">京ICP备11014626号-5</a>|<a href="#">京公网安备11010502025723号</a>|<a href="#">食品流通许可证SP1101121310106363(1-1)</a>|<a href="#">出版物经营许可证 新出发京批字第直130121号</a></p>
+</div>
+</body>
+</html>

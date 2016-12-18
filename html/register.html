@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="../contains/styletwo.css"/>
+<link rel="stylesheet" type="text/css" href="../css/reg_style.css"/>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script>
+	$(function(){
+		var check1=false,
+			check2=false,
+			check3=false,
+			check4=false;
+		$('#RegForm_username').change(function(){
+			$(this).siblings('#usernameMessage').show();
+			var phone=$('#RegForm_username').val();
+			if(phone&&/^1[3|4|5|8]\d{9}$/.test(phone)){
+				$(this).siblings('#usernameMessage').hide();
+				check1=true;
+			}
+		});
+		$('#RegForm_password').change(function(){
+			$(this).siblings('#passwordMessage').show();
+			var password=$('#RegForm_password').val();
+			if(password.match(/^[\@A-Za-z0-9\!\#\$\%\^\&\*\.\~\_\[\]\{\}\,\;\'\=\-\+]{6,16}$/)){
+				$(this).siblings('#passwordMessage').hide();
+				check2=true;
+			}
+		});
+		$('#RegForm_repassword').change(function(){
+			console.log('in');
+			$(this).siblings('#repasswordMessage').show();
+			var password=$('#RegForm_password').val();
+			var repassword=$('#RegForm_repassword').val();
+			if(repassword=='')
+			{
+				console.log('kong');
+			}
+			if(password===repassword&&password!=''&&repassword!=''){
+				$(this).siblings('#repasswordMessage').hide();
+				check3=true;
+			}
+		});
+		$('#RegForm_captcha').change(function(){
+			$(this).parent('p').siblings('#captchaMessage').show();
+			var captcha=$('#RegForm_captcha').val();
+			if(captcha=='riyeqf')
+			{
+				$(this).parent('p').siblings('#captchaMessage').hide();
+				check4=true;
+			}
+		});
+		$('#submit').click(function(){
+			var phone=$('#RegForm_username').val();
+			var password=$('#RegForm_password').val();
+			var repassword=$('#RegForm_repassword').val();
+			var captcha=$('#RegForm_captcha').val();
+			if(!(phone==''&&password==''&&repassword==''&&captcha==''))
+			{
+				if(check1==true&&check2==true&&check3==true&&check4==true)
+				{
+					$.cookie.json = true;
+					var userName = $('#RegForm_username').val();
+					var passWord = $('#RegForm_password').val();
+					$.cookie('username',userName,{expires: 7,path: "/"});
+					$.cookie('password',passWord,{expires: 7,path: "/"});
+					console.log($.cookie('username'));
+					console.log($.cookie('password'));
+					window.location.href = "regsucc.html";
+				}
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<!--top-->
+<div class="top">
+	<div class="logo">
+    	<a href="#"></a>
+    </div>
+    <div class="nav">
+        <dl>
+            <dt><img src="../img/logo_nav1.jpg" /></dt>
+            <dd> 
+                <p>100%正品保证</p>
+                <span>Genuine Guarantee</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt><img src="../img/logo_nav1.jpg" /></dt>
+            <dd> 
+                <p>比香港更便宜</p>
+                <span>Attractive Pricing</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt><img src="../img/logo_nav1.jpg" /></dt>
+            <dd> 
+                <p>现货现发</p>
+                <span>Lightning Delivery</span>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="mem_content clr">
+    <div class="mem_box">
+        <div class="mem_box_tt">
+            <p>立即注册珍品网，<a>获得100积分！</a></p>
+            <span>我已经注册，现在就&nbsp;&nbsp;<font><a href="login.html">登录</a></font></span>
+        </div>
+        <div class="mem_form">
+            <form id="regForm">            	
+            <div class="phone-mail">
+                    <span class="mem_name">手机：</span>
+                    <input autocomplete="off" class="mem_text" name="RegForm[username]" id="RegForm_username" type="text">
+                    <label id="usernameMessage" class="mem_text mem_bg mem_text_er" style="display: none;">您输入手机号不正确</label>
+            </div>
+            <p>
+            	<span class="mem_name">登录密码：</span>
+                <input autocomplete="off" class="mem_text" name="RegForm[password]" id="RegForm_password" type="password">                    
+            	<label id="passwordMessage" class="mem_text mem_bg mem_text_er" style="display: none;">密码长度只能是6-16位字母/数字/符号</label>
+            </p>
+            <p>
+            	<span class="mem_name">确认密码：</span>
+                <input autocomplete="off" class="mem_text" name="RegForm[repassword]" id="RegForm_repassword" type="password">
+           		 <label id="repasswordMessage" class="mem_text mem_bg mem_text_er" style="display: none;">两次输入的密码不一致</label>
+            </p>
+            <div class="mem_captcha">
+            	<p>
+                	<span class="mem_name">验证码：</span>
+                    <input autocomplete="off" class="mem_text2" name="RegForm[captcha]" id="RegForm_captcha" type="text">                    
+                </p>
+                <div class="captcha_box">
+                	<a id="refresh" href="javascript:;">
+                            <img id="captcha" src="../img/checknum.jpg" alt="验证码">                                                                            换一张
+                    </a>
+                </div>
+                <label id="captchaMessage" class="mem_text mem_bg mem_text_er" style="display:none">验证码不正确</label>
+            </div>
+            <p class="pact ">
+            	<input name="RegForm[readme]" id="RegForm_readme" value="1" checked="checked" type="checkbox">我已阅读并同意
+                    <a id="showProtocol" href="javascript:void(0)">《珍品用户注册协议》</a>
+            </p>
+       	    <p class="submit mem_sub">
+	            <a id="submit" href="#">注册</a>
+            </p>
+            </form>        
+		</div>
+	</div>
+</div>
+<!--foot-->
+<div class="foot">
+	<p><a href="#">奢侈品网购</a> | <a href="#">奢侈品购物</a> | <a href="#">奢侈品网站</a> | <a href="#">世界奢品</a> | <a href="#">奢侈品咨询</a> | <a href="#">企业客户</a> | <a href="#">关于我们</a> | <a href="#">联系我们</a> | <a href="#">人才招聘</a> | <a href="#">友情链接</a> | <a href="#">收藏珍品网</a></p>
+    <p class="last"><a href="#">Copyright&copy;2011-2014珍品网-中国领先的奢侈品购物网站|</a><a href="#">世界顶级奢侈品品牌网购网站</a></p>
+</div>	
+</body>
+</html>

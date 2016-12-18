@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin: 0;padding: 0;}
+a{text-decoration:none;	cursor:pointer;}
+img{border:0;}
+ul,li{list-style:none;}
+body{font-size:12px;font-family:"微软雅黑";}
+
+.put{width:860px;height:401px;margin:0 auto;border:1px solid #e5e5e5;background:#fffefa;padding-left:130px;color:#666666;}
+.put h3{display:inline-block;font-size:12px;padding:40px 0 20px 0;}
+.put p{display:block;line-height:24px;width:390px;}
+.put .order{width:330px;height:137px;border:1px solid #e5e5e5;padding:15px 0 0 20px;background:#ffffff;margin-bottom:15px;}
+.put .order a{color:#cc9933;margin-left:23px;}
+.put .order span{color:#cc0000;}
+.put a{display:inline-block;}
+.put i{display:block;font-style:normal;font-size:20px;color:#fff;width:148px;height:38px;background:#e18400;border:1px solid #ba6600;border-radius:3px;text-align:center;line-height:38px;}
+.put i img{padding-left:10px;}
+.put label{display:block;margin-top:35px;}
+.hint{width:986px;height:150px;padding:1px;border:1px solid #e5e5e5;margin:10px auto 0;background:#f9f9f9;color:#555555;}
+.hint h3{display:inline-block;font-size:12px;padding:20px 0 6px 20px;}
+.hint p{padding-left:37px;line-height:24px;}

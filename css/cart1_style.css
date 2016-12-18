@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin: 0;padding: 0;}
+a{text-decoration:none;	cursor:pointer;}
+img{border:0;}
+ul,li{list-style:none;}
+body{font-size:12px;font-family:"微软雅黑";}
+div{overflow:hidden;}
+
+.bt{width:990px;height:44px;margin:0 auto;}
+.bt p{line-height:44px;font-size:18px;font-weight:bold;color:#3c3c3c;}
+.news{width:990px;height:36px;margin:0 auto;margin-bottom:10px;}
+.news p{line-height:34px;color:#f46749;background:url(../img/news.jpg) no-repeat 12px center #fff9f3;border:1px solid #ffdbc1;padding-left:40px;}
+.bag{width:988px;height:auto;margin:0 auto;border:1px solid #ededed;}
+.bag .head{width:988px;height:31px;background:#f6f6f6;line-height:31px;}
+.bag .all_ck{float:left;width:130px;padding-left:10px;}
+.bag .name{float:left;width:205px;padding-right:20px;}
+.bag .message{float:left;width:116px;text-align:center;}
+.bag .count{float:left;width:136px;text-align:center;}
+.bag .price{float:left;width:96px;text-align:center;}
+.bag .privilege{float:left;width:110px;text-align:center;}
+.bag .remark{float:left;width:96px;text-align:center;}
+.bag .handle{float:left;width:66px;text-align:center;}
+
+.good{width:988px;height:129px;background:#fffdf1;border-top:1px solid #ededed;color:#6c6c6c;}
+.good a{color:#6c6c6c;}
+.good .all_ck{float:left;width:66px;line-height:129px;}
+.good .name{width:269px;padding-top:40px;}
+.good .name a{display:block;}
+.good .name .img{float:left;}
+.good .name img{width:40px;height:40px;}
+.good .name .nam{float:left;width:200px;padding-left:10px;padding-top:5px;}
+.good .message{padding-top:45px;}
+
+.good .count{padding-top:50px;}
+.good .count .option-num{width:78px;height:20px;line-height:20px;border:1px solid #a8a8a8;float: left;text-align:center;color: #a8a8a8;background:#f7f7f7;margin-left:30px;color:#000;}
+.good .count .option-num a{color:#000;}
+.good .count a{display:inline-block;width:20px;height:20px;text-align:center;color: #a8a8a8;}
+.good .count .minus{float:left;border-right:1px solid #a8a8a8;}
+.good .count span{display:inline-block;float:left;width:36px;}
+
+.good .count .add{float:left;border-left:1px solid #a8a8a8;}
+
+.good .price{float:left;width:96px;text-align:center;line-height:120px;}
+.good .price span{color:#ff4400;}
+.good .privilege{float:left;width:110px;text-align:center;line-height:120px;height:120px;}
+.good .remark{float:left;width:96px;text-align:center;line-height:120px;height:120px;}
+.good .handle{float:left;width:66px;text-align:center;padding-top:45px;}
+.good .handle a{display:block;line-height:18px;}
+
+.bag .total{width:988px;height:113px;}
+.bag .total .total_one{width:988px;height:64px;border-top:1px solid#ededed;}
+.bag .total .total_two{width:988px;height:47px;border-top:1px solid #ededed;background:#fafafa;}
+.bag .total .right{width:250px;height:auto;float:right;padding-top:15px;}
+.bag .total .right p{display:inline-block;float:left;line-height:20px;color:#6c6c6c;}
+.bag .total .right .last{padding-left:47px;}
+.bag .total .right label{float:right;color:#6c6c6c;padding-right:20px;}
+.bag .total span{color:#ff4400;}
+.bag .total .all{width:275px;height:auto;float:right;}
+.bag .total .all p{display:inline-block;float:left;line-height:47px;color:#3c3c3c;font-size:14px;font-weight:bold;}
+.bag .total .all label{float:right;line-height:47px;color:#6c6c6c;font-size:20px;padding-right:20px;}
+.btn{width:990px;height:36px;margin:20px auto;font-size:16px;font-weight:bold;}
+.btn .go{float:left;width:128px;height:34px;line-height:34px;text-align:center;border:1px solid #d9d9d9;border-radius:3px;color:#6c6c6c;}
+.btn .settle{float:right;width:130px;height:36px;line-height:36px;text-align:center;border-radius:3px;background:#ff4400;color:#FFF;}
